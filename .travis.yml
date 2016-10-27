@@ -3,18 +3,17 @@ dist: trusty
 sudo: required
 node_js: stable
 addons:
+  firefox: '46.0'
   apt:
     sources:
     - google-chrome
     packages:
     - google-chrome-stable
 before_script:
-- npm install web-component-tester
-- npm install bower
-- export PATH=$PWD/node_modules/.bin:$PATH
+- npm install -g bower web-component-tester
 - bower install
 script:
-- xvfb-run wct --skip-plugin sauce
+- xvfb-run -s '-screen 0 1024x768x24' wct --skip-plugin sauce
 env:
   global:
   - secure: OZHF/wxBUmC55Xv1DXKjIjo004vtdFzI9n1HovEiGyqpXgIGTacWcuz7tb+bqlA0KFhGlHKaWmQtU5BbRXISuvajXrYni7wajcKg+YNYpskW51Ewejdf+sUp4f46BMtwBNThGQBNNbb3tYeoILWc7hi72NEZAE67LWo/t0ADhUpJ5Dk4Hff8shu0sLfoIvxDb0VmL5x3+51X2jN83j/dXh6GRGv61SB1Y0EAI0jkMIXXhYd00SlNYtXi8zCX+6ZJR6TuoPe4/mhyklvhVv0C/cWRE4O8sx/VR5woaj7eKPFCr5n6oCbKuTZsA2Z8MjkoP6xCPLCRQpxTKI/+7b8uMubElKBylkE2Gy6hU9/It2/s3eBHcRyq6fCkcSuIM1zX3NOo9ur+FQ/nf+CyPKkViHzeGQhxqtkjV1lJrUDjmcr0nY7J7oYS50izM7x+X3P+3rbwJ10ayyOX2Ll+D5eC6IMg2sspEdanKeCvAuElXMrZg0+37SuwizbcnwEiXsjpjgHSUQZ8oRMKZ68dwqpyIT2BJhCP7asS1EmajNSn5dj5pCaoBoiZ/Q56dpsLoXTb0w4Nwxj+YwjDLhe6XgYjHtWSetrFa35AJK+UZaJORacwsPOHvX3RNOWYu/gjOqeKwl1xEtwD+mdpTpS5v625gxY7CWxnNVcyH4VjbQRh9uI=

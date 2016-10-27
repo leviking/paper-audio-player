@@ -1,4 +1,6 @@
-# paper-audio-player [![Build Status](https://travis-ci.org/gorork/paper-audio-player.svg?branch=master)](https://travis-ci.org/gorork/paper-audio-player)
+# paper-audio-player
+
+[![Bower version](https://badge.fury.io/bo/paper-audio-player.svg)](https://badge.fury.io/bo/paper-audio-player) [![Build Status](https://travis-ci.org/gorork/paper-audio-player.svg?branch=master)](https://travis-ci.org/gorork/paper-audio-player)
 
 A custom audio player with material paper style and clean design.
 
